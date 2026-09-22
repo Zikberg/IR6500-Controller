@@ -1,0 +1,46 @@
+{
+  "name": "LGA1151 Socket",
+  "holdback": 5.0,
+  "segments": [
+    {
+      "ramp": 0.7,
+      "target": 160.0,
+      "dwell": 60.0
+    },
+    {
+      "ramp": 0.6,
+      "target": 225.0,
+      "dwell": 40.0
+    },
+    {
+      "ramp": 0.5,
+      "target": 235.0,
+      "dwell": 120.0
+    },
+    {
+      "ramp": -0.01,
+      "target": 180.0,
+      "dwell": 30.0
+    },
+    {
+      "ramp": 1.5,
+      "target": 210.0,
+      "dwell": 30.0
+    },
+    {
+      "ramp": 1.5,
+      "target": 245.0,
+      "dwell": 30.0
+    },
+    {
+      "ramp": -0.01,
+      "target": 265.0,
+      "dwell": 40.0
+    },
+    {
+      "ramp": 3.0,
+      "target": 275.0,
+      "dwell": 40.0
+    }
+  ]
+}

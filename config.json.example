@@ -1,0 +1,7 @@
+{
+  "port": "COM1",
+  "baudrate": 9600,
+  "address": 1,
+  "last_preset": "",
+  "language": "uk"
+}
