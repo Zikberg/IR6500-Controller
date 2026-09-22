@@ -1,9 +1,26 @@
 # IR6500 Controller
 
-Python controller for the **ACHI IR6500** BGA rework station (AL808 / PC900 protocol).  
-The app manages temperature profiles over RS-232 and shows a planned profile chart plus live telemetry (PV / SP / output power).
+Python controller for BGA rework stations and other equipment with **ALTEC AL808 / PC900 / PC410** temperature controllers.  
+Developed for the **ACHI IR6500**, and also works with the **ALTEC PC410** (same RS-232 protocol).  
+The app manages temperature profiles over serial and shows a planned profile chart plus live telemetry (PV / SP / output power).
 
 ![IR6500 Controller main window](docs/screenshot.png)
+
+## Download (Windows)
+
+Ready-to-run executable — no Python required:
+
+**[Download IR6500-Controller.exe](https://github.com/Zikberg/IR6500-Controller/raw/main/dist/IR6500-Controller.exe)**
+
+On first launch, the app creates `config.json` and a `presets/` folder next to the exe.
+
+## Compatible controllers
+
+| Controller | Status |
+|------------|--------|
+| **ACHI IR6500** (AL808) | Primary target — fully tested |
+| **ALTEC PC410** | Compatible (AL808/PC900 protocol) |
+| **ALTEC PC900** | Compatible (same protocol as AL808) |
 
 ## Features
 
@@ -84,9 +101,9 @@ python main.py
 3. Load preset **Lead-Free SAC305 ACHI PTN-2** or configure steps manually.
 4. Click **Download**, then **START** — live telemetry appears on the chart.
 
-### Connect to a real IR6500
+### Connect to real hardware (IR6500, PC410, PC900)
 
-1. Connect the station to a COM port (e.g. USB-UART CH340).
+1. Connect the controller to a COM port (e.g. USB-UART CH340).
 2. On the device, verify **ADDR** and **BAUD** match the app (typical: address `1`, 9600 baud).
 3. Select the port → **Connect** → **Upload** / **Download** / **START**.
 
@@ -143,3 +160,7 @@ The screenshot shows the **Lead-Free SAC305 ACHI PTN-2** profile from the [ACHI 
 ## License
 
 No license specified yet. Add a `LICENSE` file if you plan a public release.
+
+## Disclaimer
+
+This software is provided as-is. **Use at your own risk.** The authors are not liable for any damage to equipment, PCBs, components, or injury resulting from incorrect temperature profiles, misconfiguration, or communication errors. Always verify profiles on scrap boards before rework on production hardware.
